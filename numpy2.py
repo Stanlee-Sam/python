@@ -1,27 +1,30 @@
+#add two list of number using pytho list and numpy array and compare them
+
 import numpy as np
 import time
 import sys
 
-size = 100000
+size = 1000
 
 #list
 l1 = range(size)
 l2 = range(size)
 
-#np array
+#array
 a1 = np.arange(size)
 a2 = np.arange(size)
 
-#py list
+#python list
 startl = time.time()
 result = [(x+y) for x,y in zip(l1,l2)]
 endl = time.time()
-durationl = endl - startl
-print("List took: ", durationl * 1000)
+durationl = endl-startl
+print("List took: ", durationl * 1000) #in millliseconds
 
-#array
+#numpy array
 starta = time.time()
 result = a1 + a2
 enda = time.time()
 durationa = enda - starta
-print("Array took :", durationa * 1000)
+print("Numpy array took: ", durationa * 1000)
+
